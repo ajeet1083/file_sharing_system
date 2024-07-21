@@ -67,7 +67,7 @@ python manage.py test
 
 
 
-Postman Collection
+## Postman Collection
 A Postman collection is included in this repository for easy API testing.
 
 Importing the Collection
