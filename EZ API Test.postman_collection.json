@@ -1,0 +1,1056 @@
+{
+	"info": {
+		"_postman_id": "e2f7ff91-8116-48b7-87af-74bca0b29057",
+		"name": "EZ API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36452114"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParam",
+							"type": "string"
+						},
+						{
+							"key": "secret",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDYyMTYwLCJpYXQiOjE3MjE0NjE4NjAsImp0aSI6IjhjMTQ4ZGE3OGRiMzRhYzViNTAzOTdjNDdmM2ExMjI1IiwidXNlcl9pZCI6Nn0.uT5Pjs8yYuscmFkvPxN4QhvcRpHgc6YJdg4VDeoXn3s",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ajeet11",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Ajeet@123",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "client",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SignUp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ajeet11",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Ajeet@123",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "client",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:11:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"A user with that username already exists.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "LoginUser1",
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParam",
+							"type": "string"
+						},
+						{
+							"key": "secret",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNDYyMTYwLCJpYXQiOjE3MjE0NjE4NjAsImp0aSI6IjhjMTQ4ZGE3OGRiMzRhYzViNTAzOTdjNDdmM2ExMjI1IiwidXNlcl9pZCI6Nn0.uT5Pjs8yYuscmFkvPxN4QhvcRpHgc6YJdg4VDeoXn3s",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ajeet5",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Ajeet@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LoginUser1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ajeet5",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Ajeet@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:11:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "483"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMTY2MTA3NiwiaWF0IjoxNzIxNTc0Njc2LCJqdGkiOiIwMGI5MjgwNWMyNTM0YWRiYjg3MjkzZDhjNGViNGRlNSIsInVzZXJfaWQiOjd9.Is5zd1gXyabWnQt2fEICrNxXS0visF4-O08rgQR3Bl0\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTc3Njc2LCJpYXQiOjE3MjE1NzQ2NzYsImp0aSI6IjVhZDQyMTUyYzEzMjQ3YjZiNTA2NzNlODFiOGIzZTM5IiwidXNlcl9pZCI6N30.sn6-bXaJSewRO_ktVV9cfktoZZNNMqJiL6DLE7NL-oU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload File",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "headerPrefix",
+							"value": "Bearer  {{token}}",
+							"type": "string"
+						},
+						{
+							"key": "secret",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "isSecretBase64Encoded",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "postman-cloud:///1ef47624-78a5-4570-9063-2ffd4c1118f6"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/upload-file/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"upload-file",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload File",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTc2NDA0LCJpYXQiOjE3MjE1NzM0MDQsImp0aSI6IjczZGZhNDAxOWU1MjQ4YmM5NmJiMzFkODQ5MjFhZjI5IiwidXNlcl9pZCI6N30.ODeEXCRHV-baspoqUd9iLb2NY9WHcXXX2GXSsf-dRcU eyJhbGciOiJIUzI1NiJ9.e30.fo0Vd0ZSw0CJMVLAJGgiq6Mt9fVaan_XMu1Eg_AO1CY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "multipart/form-data",
+									"type": "file",
+									"src": "postman-cloud:///1ef47624-78a5-4570-9063-2ffd4c1118f6"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/upload-file/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"upload-file",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:09:22 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"file\": \"http://127.0.0.1:8000/media/media/AjeetKumarMauryaResume.docx\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LoginUser2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ajeet11",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Ajeet@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LoginUser2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ajeet11",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Ajeet@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/login/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:13:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "486"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyMTY2MTIxOSwiaWF0IjoxNzIxNTc0ODE5LCJqdGkiOiJlMjIyMTA1MzA5Njk0YzZhODZiNTVjMzNjNGMyZDllNSIsInVzZXJfaWQiOjEzfQ.phE34xlCzDiKZTlnWfsWC8xj_HKFdxjgvzmtup0m2ag\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTc3ODE5LCJpYXQiOjE3MjE1NzQ4MTksImp0aSI6ImQxZDUyOGE5M2JlYTQwOGQ5YzM0NDFkOTUwMDViYTdmIiwidXNlcl9pZCI6MTN9.QXfijCHNXtidP177jPRHwSyW8mTC_-wGf2bGU5WIu7k\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Files",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/list-files/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"list-files",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:12:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"file\": \"http://127.0.0.1:8000/media/media/AjeetKumarMauryaResume.docx\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Download Link",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user2token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/download-link/1/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"download-link",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Download File",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/download-file/MQ/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"download-file",
+								"MQ",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 15:56:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13393"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=\"Ajeet_Kumar_Maurya_Cover_Letter.docx\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000ߤ�lZ\u0001\u0000\u0000 \u0005\u0000\u0000\u0013\u0000\b\u0002[Content_Types].xml �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���n�0\u0010E���\u000f��Ub袪*\u0002�>�-R�\u0007\u0018{\u0002V��Ǽ��\u0013\u0002QU\u0001�\nl\"%3��3Vƃ�ښl\t\u0011�w%�\u0017=���^i7+���-d\u0019&�0�A�6�l4��\u0019L6\u00010#�Ò�S\nO����\u0015X�\u0000�*��V$z�3\u001e��\u00163����\u0003��%p)O�\u0007\u001b\u000e^�\u0012\u000b���5}nH\"\u0018d�s�Xg�L�`�\u0014��|�ԟ�|�P�rۃs\u001d��\u001a\u0018?�PW�\u0007�t\u001ft4Q+��\"�wa���|T\\y���,N�\u001c��U�%���-D/\u0001��ܚ��X�ݞ�(\u0007��\u0001�\n<E��\u001d\u000f)��\u001a\u0000;�N�\u0015L?�F�˼\u0013��܉�\u001a�\n    <Fk�\t�h\u0003�y����ڜ���q�\u0001i��?�ޯl��i�\u00001��]�H�g�\u0007�m�@\u001d����m�\u0003\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\b\u0002_rels/.rels �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\f@���ѽQ��\u0018�N/c��\u0018�\u0007\b[IL\u0013��j���<��\u0002]�aG��ӓ�zs�Fu��]�\u001a�U\r��\t��^�[��x\u0000����1x�p�\f���f��#I)ʃ�Y\u0015��\u001a\u0006������\u0013�*D��\u000bi\")��c$���qU���~3��1��jH[{\u0007�=E��\u001d��\u0019~\nf?��3-���޲]�Tꓸ2�j)�,\u001al0/%��b�\n\u001a���z���ŉ�,\t�\t�/�|f\\\u0012Z���\u0019?6�!Y�_�o\u001b�]A�\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�d�Q�\u0000\u0000\u00001\u0003\u0000\u0000\u001c\u0000\b\u0001word/_rels/document.xml.rels �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\u0010E�����}-;}PB�lJ!���\u0000E\u001e?�,\t��`HI��`��r��sπ6����w��{���r\u0010茯{�*x�\u001e��A\u0010kWk�\u001d*\u0018�`[^^l��jNK���D�8R�1���d:\u001c4e>�K/����4�V\u0006m^u�r��w2N\u0019P�0ŮV\u0010w�5�j\f�\u001f�o����7o\u0003:>S!?p����8JX\u001d[d\u0005�0KD��EVK��\u001f�c2�P,���ũ�a���]���.��\u001f�ﰘs�Yҡ�+��\u0013���(!O>z�\u0005\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000n8\u0017ij\t\u0000\u0000�F\u0000\u0000\u0011\u0000\u0000\u0000word/document.xml�\\�o\u001b�\u0011��@�\u0007b�k\u0013T�%�\u0011�=�*�v�\u0016I�(A�\u0006AA�����\u000b�+E��;CR���^\u001d\u0007����0�\u000fr8||�\n        <H�ǟ>W���X��I���\u0012\u0006*ՙP�I�����Q¬�*�R+8I\u0016`��N��\u001f�ǙN�\n�c(B��y��$�s���MK���V\"5���uS]��<\u0017)�ε�v\u0007�~�_�F�`-����\u0019�I\u0014W�\\��A��\\��;�5�n�ʹ�wPz͝�\b)�\u0002e�\u000e�b�I�\u0018u\u001cE�\u0014�*�A����a��n�r\u001eG���k@�\u000eZ�R��n�W\u001a�,�Bf�։Y%���u������9~�\u0005�E�,T�d���%�{w�\u0011\u0012��q\u0017\u0015n��Ԥ�B�\u001b����\u0018����\t\u0018l\n��o���F7�Z��6iWj��E��\nYq�ov�~�2�׈�*=�*�6|\"Q#�2���hY'��8\u0013�-�f�cd���I��]\f\u0007\u0017G����9休��oF7\u001ey!#�?�n!\u0001�̸\n            <I�К�\u001f`����g�/�45�K��\u0012H��r�\f�E�ST�Gש�\u001a\u0019�b�~�\u0010\t���vNW��oDQ޻���\u0010�2[JI%ps�\n                <o���\\H|{�B�$\u001c��w\u0013@�.�\t7C�\u0016\u000b��\n                    <w���z뻍B�Ka�̥V�RA�\n\u0004�\u0018\n\r��\u0015�-��n\n                        <J�{/ǫ��T�~c�}\u000b���F������nQc/l\rR�\u001d7.j�\u001d�B\u001dN��\u0000�����?+y���DE\"��ڪ\rX03HN��\u001a���N������7f��z|O;\u001b�m��rU7���;�=62<\u0003[vؠw���ٓ?=�?e�\u000f\u000f�\u0007����\u001e㴎��&*?��\u000e���R�ݖd5nu���灵��@�?\u0012�C���\r�����v��\u0011.�W�и��\u0017`�h���}|A\t\u0007�`ox\u0005�ַ�,�B��\b��0�a\u001ct�?E�¹��c��9�0��\tꀛ�.l��\u0016\u0013�\u0003\u0013W��\u001b�h��f�L�eՂ\t��\u0002��\u0005s%���ݜ\u001b`\u0017�\u0010\n��Z[AYf�݆\u0019�0n\u0019�f`���1,�q^�8��\r�u�2/�ZOH\n����>\bW2ά3\u001a�񥸗�\u001aPZ�A�\u0018�\u0005�\u0014X�0NE-�bc�斶\r��aa�\u0000�b#�eF̀���h\n�p)\u0017�\u001a'!�M\u0007i�D�%�>g/H�\u001f\u0016 �X�4b���\u001d�-��3�mFz�kHq�p\u0010�s�iSp%�xͻ\u001b.�D�)�\u0013��\u0002Ό��zT8j'ɿ^�3�N��\fe1�_��Pi����{n�e�Ec\f(�\u0018�\u001bc\u001b\u001aX\u0004���;�1�\u0004ѐ�q�?��󊳨<\u00025�ؕB�q�k�3��P�b\u0011��Pt.\u0014rÂ|�y�'�\u0003+���F��\f*��\u001a��\u0003�\u0016;��z\u001c���س�\u000f�#\u0013\"�t�z\u0012hk-j�kI\u0006Y�zƠ���$8 �:G��\u0015�c�r�0���-Li�ܠ�u'=�,i��c;2���!��H�E�Ŵ�\u0007�A�ÂπhLK\u00013\u000f\b\u0003d\u0014iW�=;�\u001e=�ᶍm�ck\u001e\u001f�y|W\u001a�\u0014�n\u001c\u0019��y�F�T�7l%�\"Vj�`�\u0012H\r��UE3`�89ֻ�\u0005Z/,P��A�\u001a�\u000240�� 6g�\b���:��D��a�@V\rm\u0019���\fa+uM\u0016��^�\u0006s��\u0017E\u0018�l2�;Z��L��ը�f\u000e����x��\u0005���֓��5W��j�=��K��4DE\u0015\u000e�\u000f�p�H?����e�T�\f��\u0007v\u0014+Egh�����P8F=��P\u001a�f�Cϐ��\u001d��l\u0015�\r\u000b!o�\u0002V\u0001Nv\u0016�MK�-y?Ƽ�ߕ�9\u0002\u0003\u0013\u0007R,�}\u001ce\"�`f�%��@g��\b�����/�\u000f\u001df\u001b��\u0010�\u0017;�Η�Rר�C�R�p4�t<�\u0002���\n\u0007O;\u0018:~v�\u00029\u0013�>��\u0012����\u001b������7a\u0017Y3ƨ\f�ۈ��j&a\n��2����Q\u0014�t��{�\u0018;k���tٻ\u0012�o��S�1��\u0002�R���Èi#\u0011��z�\u000bd\u0013t�����H�ғ-yV�|o�\u000e�P��K�\u0005�\n\u0019H�H��%D���\u0003���k\r^\u001b�D:��H�\u0018WRj��cr,\u0004'1 q!�a)�&`����\u0006/�\u000f4\u001b\t\riE8��������k�<��B|�F�`'�@M�\u000b�n�����\f9OG��2\u0002��R�G�x�ÍVP���_�1�\u001c\u0012�n�w��9ʓ#\r�/�`��6D��E\u0017��k���\u000fc��1\u0011\u000f\u0011\u0014�����#h=��#��\u0018Z:\u0000�S��i�-��F�21\u0013\u0019:�>\u001f��S�\u0005@\u0015��9�P�͵�zs�޶��i��\u0000:\u0006\u0002C\u0002�L*p�h���\f�w���55B\u0011}\u000e�|�B`HA!�3���\u0011�'\u0006bt�6i��\u000e��ֽE��@6�\u000183����;]%e\u0017]v)��:@���\u0015����\u0005bD�i�+:~a��G\n                            <uA�mCa�?x\u0011=�۹]�s�\u0013����\u0013mBal&��\u0007�-\u0007�jC���\u001e�*��\n��?��\u0018�\u0014]��8�VH\u001bL|�����V�\u0014=�x�4/a���#��\u0017F��$\u0002��MJ_[�$�\u0014@Q�LX��,+��F\u001cE��\u001b9x/E\u0011�=�O\u0001 ��<�b\"\u0004Sꄫi<�E\u0007�p��pҀr \u0018�E�����S*6�&[��\"r�_�&ɫ�D��/�Z�h)�qP�\u0007n*f�@���(����!����W��Ⱦg��̴7�?�\u000fI�Mf�o\u0002F0~\u0018���z^^1����'I0���(���h?b�.^�aLb(|�\u001f�x̯o\u0003���w%��0��w�A���`�-\u001a\u0017\u0011�\u001c<\u001a�8�T�?�t��\b\"\b:A1\u0012.E-�\u000e�g�C\u0017�e�W\u0011���Rs�o\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�R%�#\u0006\u0000\u0000�\u001a\u0000\u0000\u0015\u0000\u0000\u0000word/theme/theme1.xml�YM�\u001b7\u0018�\u0017�\u001f��\u001d��c�7�c;i����&%GyF�Q�\u0019\u0019I�]\u0013\u0002%9\u0016\n�i顁�z(m\u0003\t����mS�\u0014�\u0017��xlɖY�l`)Y�Z\u001f�����J�4��WN\u0012\u0002�\u0010㘦\u001d�z��\u0000�\u00064�i�q�\u001c\u000eK-\u0007p\u0001�\u0010\u0012���3Gܹ���\u0007�ᎈQ���O�\u000e�8�\u0010ӝr�\u0007�\u0019�Kt�R�7�,�BVYT\u000e\u0019<�~\u0013R�U*�r\u0002q�\u0014&����\u0018\u0007\b\u001cf.��������YC@�A�\u001a\u0019\u0016\n\u001bN��\u0017�s�0p\u0004IǑ���\u0010�\b\u0007\u0010ȅ��8\u0015��w/��FDl����oa�0\b'5eǢ���u=��]�W\u0000\"6q��1h,�)\u0000\f\u00029Ӝ���z�^�[`5P^���7�������7�]/�\u0018x\u0005ʋ�\u0006~8�W1�@yѳĤY�]\u0003�@y���oV�}�i�\u0015(&8�l�+^��\u0017�]BƔ\\��۞;l�\u0016�\u0015�����>\u0015��Z\u0002�S6�\u0000�\\(p\n�|��0�8\u001f\u0012\n                                <b\u0018��(�\u000bo\nS�es�V\u0019V���qUIE\u0004� �Y�M\u0001�h��\u0000\u001e0<\u0015\u001d�c��� o^����sp����_N\u001f?>}����\u001aL#����_���S����^?�ʎ�:���>���/�@�\u0003_}��\u0017�^}���?<���\f�t�!N\u0010\u00077�1�M\u001391�\u0000h����a\f�n�M#\u000eS��X�\u0003\u0011\u001b�\u001bsH�\u0005�Cf\u0004�2)\u00136���}��A�f\u0002[����\u0000�SJz�Y�t=\u001bK��,�샳���\r�ml-���T�wls��Ƞy�Ȕ�\b�H���N\u0010����؈�>\u000e\u0018�t,�=\fz\u0010[Cr�G�jZ\u0019]É���FP�ۈ��]У�澏�L��\u0015��\\\"b��*�\t�X\u0019Ä��=(b\u001bɃ9\u000b��s!3\u001d!B� D��ln��A���\u0017{���\n                                    <1�L��\r�\u0007)Ց}:�c�L��q\u001a�؏�D.Q\bnQa%A�\u001d��e\u001e`�5�w12�}�޾#�վ@��\u0019�m\tD��8'c����'8=S��d�{��.��շO��{!\u0005�˰uG���6ܺx�����kw\u001f��[Hn\u0017\u000b��t�����to���/�+�V��⪮�$[��cLȁ�\u0013�Ǖ�s9�p(\u001bUE\u0019-\u001f\u0013��,.�3p\u0011��\f\u0018\u0015�`\u0011\u001f�p*���\u0011\"�p\u001dq0�\\�\u000f���;� �d��yk�Z<�J\u0003(V��|)��i$��Fs�\b�t�j�zT.\bd����6�I�n!�,\u001a� �fv.,�\u0016\u0016���V\u0016�k�\u0015��\u0000�~��ܜ�\\o��0�Sn_d��3�-��k��3��i����L\u0012�2�a�֛�9��UJ\rzY(6i4[�\"י��i\u0003I�\u001a8�{��I7\u0001�v���\u0019�b2��x���Di�\t�\"��EY���>�q\u000eS]��\u0013,\u0010\u0003\u0004'r��i �[����xAɵ+\u0017/r�KO2\u001a�Q �����/wb�}KpV�3I� \u000e�����m(\u0003�5�Y\u0000C��2�!f��^EqM�\u0016[���l�E!��pq��b��UyIG��b�>+����(ʒ�֧��FY�&�[\u000e��Դ�ǻ;�5V+�7X�ҽ�u�B붝\u0012o h�V�\u0019�2�\u0016j�V��9^\b��Ks�\u0019qާ����\u000e��^�j\u001b�&��\\�}y]�\u0011�\u0015Ut\"�\u0011��G�\\\tTk�.'\u0002�\u0018�8\u000f*^��k�_���Aɭ��R���K]ϫW\u0007^����\u001eʠ�8�z��C�\n                                        <C�7/�}��KR\\�/\u00054)Su\u000f.+c���Z���\u0005`\u0019�\u0007�ڰ]o�\u001a�v�;,��^���\u001b�R��7�þ��Ç\u000e8R`�[��ƠUjT}��6*\u0019�V��tk����\u0006n��\"�r��w\u0011^�k�\u001f\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�2�r�\u0003\u0000\u0000�\t\u0000\u0000\u0011\u0000\u0000\u0000word/settings.xml�V�n�8\u0010}_`����*���T�Sĉ�M\u0011o���\u0000J�l\"���츋��\u001dRb�E�ݢO&�̍3gF~�ўhC��G�E\u001a���%�b;��lV�U42\u0016\t��\u0014d\u001e\u001d���]����Ca���fF�B����hg�*���;���\b\u0000\u001b�9�p�ۄ#�ت��\\!K+ʨ=&y�΢ލ�G�\u0016E�\"�����:�B6\r�I�\u0013,�9q;�;Y��\b�#&�0�A\n���\u0004o��z\u0003p\u0017���=gAg<� 5~�8'=g����1� �B�T\f�'�8z�}\u0001��'zW`���t����9�_90윗t�\u0003�4�\u001dO�g��\n�Qŀ��\u0011d\u0014]\u0003-�J�G�B\u0011]Co��i\u001a%\u000e��Ȧ��\u0012��\"�y�׌ px(�\u001aq�g�x\u001bL\u001a�2�AUi�\u0002�=��/��e�C\u001aՖ�R�\u001a��Ja�dA\u000f˿��\u0005�k�Do�?��n��B \u000e/y1\u0018k��ˬ���b;\u0003\u001f\u001d�q\u0012�u \tC�)&\u001bW��\u001e\u0019YA�%�Jn\u0004��\u001aK��\u001f����G\t\u0010�\"��o���\b�-��\u0017\u0005�X1��Tk��\u0005\u0006n��`�i��\u0000\u0014��\u0006�P-\u000f���\t°k2nrJ#��؄�g)mPM��M��Zu�:t@��d��|\u000f\u0019l�g߼p��\u000e'G�\u0011�,n\u0011�4E���~�Ө�り�W\u0004ƙ�\"e[\u00050�;�p��\n&)\u0000~�x��Qw��g�Fz;��5�w�0�\u001f�}�-@��Z��C\u000f\u001a��\u0000A%�LzK*�\u0003�Anڪ\fV\u0002\u0016�\t�\n�q�}���\u001c\n\u000b���\n                                            <!�.\u0011�'\fӥk6Y#�:�T�l\u001e1���̵��\r�G�_�m�c���\u000e�\u0017T���v\u0018dy��荃l<�&A6\u0019d� �\u000e�Y�͜l\u0007Ӫau>\u0002}���\u001bɘ<\u0010�~��\u0011uE0;��]�Y�^�\u0013��֌�\u0005y��M0���CQ�ѓ[��̙��\f\u001dek_�:�)��\u001e0�(\f�\u000bcO�W���_S�cy�հ�/��\u001950�\nv��:`x,�����\u0000�\u001f���I�@��\u001eò���\u0013���������t\u0012O�ٛx����W�l\u0019��w7Y~�/���~\n����\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�:ǆ�\u0001\u0000\u0000�\u0005\u0000\u0000\u0012\u0000\u0000\u0000word/fontTable.xmlܓ�j�0\u0014��\u0007{\u0007��Ʋ�4]�S�@a�bm\u001f@Qd[L��\u0012/o�#��.B���\n���~G�$}X�\u000f��&{�A9[�|�(�V���ME__�7w�@�v˵���\u0007\t�a���}���\r@p���\u0011\u0015mC�\u0016Y\u0006�����u�b�v���M�d��_��F8��6J�p�\n�n��o���VB~sbg�\ri|�F��Ъ\u000e���-���m睐\u0000�g�\u0007��ʞ0yy\u00062Jx\u0007�\u000e\u0013�̸����9K_F�\u0005̮\u0003\u0014'�\u0011���:�7\u001a��J\b��r�O���\u0006\u000b_�V\u001b�R��ց̱�红�`k6�w�K6�o�Ŏ��\u001ed�\f\u001d�\u0010��(}8��+��Щ �c��^�E\r%P\r\u0016v�a\u0015]��\u0015���\u000eI��c����1)�\\��2&�S�b\"\u0012'5�#\u0012��\u0007��\u0006\u0003g&^��@~Ȟ�t��\u000bF\nv�&f�#��^e�'�UF��ό��f��ȳl�$�O\u0017T<&\u0005����w�9V����S\u0015�1!�Uӆ��%\u001e�\u000fzX�\u000fX�\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0003_\u001ew}\u0001\u0000\u0000�\u0003\u0000\u0000\u0014\u0000\u0000\u0000word/webSettings.xml��oO�0\u0010�ߛ�\u001d���\rT \u000b��\u0010��1F�\u0003t]�5���-L���6�)�`�z}�_�r�t��d���\t�\t\u0019�#\u0012p� \u0013�H��z՛��y�3*A��#���ʹ�+��s��\u0005H�.V,!��&\u000eC�J����\u001a�9XE=^m\u0011*j?7��@\u0019�E*��p\u0018E#���k(���%����7��r�DЮ\u0014�\u001dh�5�\nlf,0�\u001cΣd�ST�#fp\u0001R�Yp��>\u000e��A�}\u00105��'�C7��\bP,~*4X�J\\\u0001v\u0012 ��p\u0007�غ�\u0019T��p����n2��� �l�l�[*1K�Z�\u0015<��\u001f�訾���G^��\u0014\u0017�=�?:6��l\u001d��G�C���:0��}�@\u0002n�n<�\by�Y7g���n^{>y\u0017kx\u001a�\r\u000fg�\u00180^(��W`\u0017\u0016*�m�\u001a�\u0012�ח���'�~\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Q:e�x\u0001\u0000\u0000�\u0002\u0000\u0000\u0010\u0000\b\u0001docProps/app.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�R�N�0\u0010�#�\u000fQ��i�B���P\u0011��KJ�g��$\u0016�m�nE��\r�!�\u001b9��z�3\u0013����\u0001}P֬��$K\u00134Җ�������X�I�B[���!���3x�֡�\nCB\u0014&��&F�b,�\u0006[\u0011&464��oE����V��xk�E\u0013�,�.\u0019~D4%�\u0017n L{��!������\u0017ފ�#>\u000e\u0005�N�������\u0006\u0000\n\u001b�.T�|N�����1�\u0019�����e���\u0002X_¶\u0011^�H������\u0011\u00007�i%E�\\����\u0006[���Kl�\u0011\u0000\u001b\u001f\u00012���{\u0015�<\u00036n�A\u0019R0]\u0002�+��E�k\u0002_t\u0002�\u000er)4n�;��\u000e\b�\u0007��m�0�ǆ���ë+�m����opds�b�;!�\\\u0016W�\f�F�\u0013�%9\u00184\f\u0000��\u000f񺻀vM�����A\u0017�[�2�t1����섑����O\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�7�Gs\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\b\u0001docProps/core.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��QO�0\u0010��M�\u000eK�G;@��\u0018�\u001a�$1\u0011��\u0007T��i\u000f\u0006��n��\"\u000f���~���ͦ���v�2zB�\u0001#\u0011ha�ҫ\ty[��;\u0012y�Z��h��\u0003x2ͯ�2aSa\u001c�8c��\u0002\u001f\u0005%�Sa'd�hSJ�XC�� \u0010:\u0014�ƕ\u001cC�V�r��+�C�ni\t�%GNk��v��()E'i��h\u0004��P@\t\u001a=M\u0006\t=�\b��\u0017\u001b��/�Tx�p\u0011=\u0015;z�U\u0007VU5�F\r\u001a�O������j�t�\u0000�gR����<��0D~��\r\u0002��.\t�p�Ѹ|��3�,1�B��Ɔ<Uk�7p���>h���I��)��5�\t��@\u0017��<<�R�|8\\\u001a�\u0017��\u001c�T�G�!�4;\u001a�.\b2\nF��������i1#��\r�1��\u0013�`��8I\u0019��w���\u0005��\u0002�W\u001c�\u0015O\u0002�M�Ϛ�\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\f\"�8�\u000b\u0000\u0000�q\u0000\u0000\u000f\u0000\u0000\u0000word/styles.xml��[S�:\u0012�߷j��+Og\u001f�\u0010�3�aN\u0001\u0003\u000b�\u0003Ù0;ϊ�\u0010-���e���+�N\"Ӗ���\u0004��O����վĿ����/��B���ɇ�Q��PF\"}<\u001d�x���8\n�\u0011�e�OG�<\u001f�������$/^c�\u0007\n��'Ix:Z\u0014��d<��\u0005OX�A.y�>��,a�z�=�\u0013�=�˝P&KV���E�:���=\u001a՘�\u000fE��\"�_dX&<-L�8�\"�4_�e��=��=�,Zf2�y�6:�+^�D��L\u000e\u0000(\u0011a&s9/>���{dP*|�k�K�\r�\u0010\u0007�[\u0003����1�\u0019��j�UO\u0002\u0005\u001b}V�\u001f��\u000b��2.r�2����+��J�E\u001e<��<\u0014�A�� �P��4\u0017#�\tgyq�\u000b���B���I�\u0017���\"\u0012��n1����\u0017�OG{{�w.t\u000f\u001a��,}\\��ӝ\u001fS�'�[3�=\u001d�lgz�\u0003���U��]�}e\u001a^�P�vؼ�*�&G�\u001a\u001a\u000b��{��V/��zlYYȺ\u0011\u0003����c0�*�T�M+\u0017�O���\f�x4-�\u0007�#Ӗz���}&d�2�t�ɴ�ޜ�D\\�(���t!\"�s��\u001f9�6��ye��~#�e���?��,����%�K���ӔiM�t@��]�M�&��+ؤV�-~���\u0000��[��>\n��#rkkۙ�m7�B5��^\r\u001d�WC�����{5t�^\r}|��\f�lH�\u0011��\b�\u0001�m\u001c�\u001b�\u001c���\u001c���\u001c�U�\u001c�\u0013�\u001cG��9�<Fs\u001ci��\u00142te�����l��n�G�q��\u0012����\u0000~��\u0013�\u001fw�����>��q���~��5�[-��\u001be��\u0018첹�E*\u000b\u001e\u0014�e8���e�\"\u001a����d#\t0��V�\u0007�Bf^o�\u0010cR��y�\u000b�@΃�x,3UL\u000f�8O�X��\u0001�\"�#\u0004f�(3ǈ��t��<�i�)\u0013�\u000e�+� -�\u0019An.�#\u0019��\u0011��$��:�U���&\u0011\u0004I��0�û&\u0019���U���JC��2�9\u0011�&�\fkxm`0�K\u0003�\u0019^\u0019\u0018����Ҍj�j\u001a�H�4�\u0001�iD�V�'ո�4�q�iD�Vӆ�ۃ(b3�۫�I�cw\u0017��Ǳ\u0007�c*\u001eS�\u0016\u0000�w7�1���e�1c�E��J�c�mƶs.����b��&Q��M�\\��\u0016i9|@\u001b4*s�yD�Z�\f��\r�حZ&�\u0005�5M=3-gE�i\r��i�,.�\u0005�p��bx�m\fp%���\u0006�X�\f���Y-'�̷����mX�m�vV\"�^�$�e,�'�i��u�3U�=\r&]�8��<�#N�LV�f[~�H����r�raj�\u0006���~u\u0006<�e��\u001bt\u001f3���v��0\u0011\u0007t+��ۯ��\\�2S\u000f\f\r�\\\u0016�LȘ����~��?h:x�����hkψ\u000e\u000f\u0019؅ ��T$\u0019\u0011��2S��d\u001fjx��3ɲ��v��ꢓ�\u0013\u0011�,YV�\u000e\u0002o�y�Y�?\u0004�!��7˄>.De�\u0007\u0012�u�0/g�����N\u0006$G����9�h��&�\u000e7|���\r_\"\u00185��A�/��6p�7����؋��p�B��Qm�G��Ë��'c��˘n\u0000W@�\u0011\\\u0001ɆP�e��[lx�\u001blx��K�2�GpH������L\f\u0003�R���d00*\r\f�T��W�X���X����T0�%�\u0005��3��?�Y\u001e\u000bF�g\u0006F�g\u0006F�g\u0006F�g�_\u0002>��E0�.�BR圅��Ѥ\u0005O�2c�+\u0011�2揌�\u0000iE���\\ߍ ��\"n\u0002�>F\u001d\u0013.�+\u001c��?���k�E�/�#�,��$:������k��̝\u001c��p\u001f��/d\u001c�̱M�XU/O��2�v�t��aϯ�qQ\u0004���h��9��\u001a�*�\u001ba�\u001bl\u001b���,ma�<\u0012e��(���h����F�����J�\u0011y�3\u0012�y�=r�JnD\u001e���m~�\u0019i|ڈ���\u0017�=�&�qW��k<G�\u001dwe�:��ٮDZG���qW\u00165�\u0012���>[\u0000���\u0019w|?��1.rS0vrSz�ʍ�2�w�K�=;f�4����\u0000�YD��9�,euܾq©�M]7j��<h���?q՘e���{�q#z�;nD�\tȍ�5\u00139�QS���{nr#zORn\u0004z��{\u0004�l\u0005�q�\u0015���� �g�\u001a�\np#z/\u0007�\b�Q!\u0002m�\u0001+\u00057\u0002eT\u0010�eTHA\u001b\u0015\"�F�\b�Q�\u0002\fgT\u0018�3*��1*��\u0018\u0015R�F�\b�Q!\u0002mT�@\u001b\u0015\"�F�\\�;ý�\n)h�B\u0004ڨ\u0010�6�Y/\u000e0*��\u0019\u0015��\u0018\u0015R|�\n)h�B\u0004ڨ\u0010�6*D��\n\u0011h�B\u0004ʨ �˨��6*D��\n\u0011h�V�\u001a�\u001b\u0015��\n�}�\n)>F�\u0014�Q!\u0002mT�@\u001b\u0015\"�F�\b�Q!\u0002eT\u0010�eTHA\u001b\u0015\"�F�\b�Q���\u0001F��8��x\u001f�B��Q!\u0005mT�@\u001b\u0015\"�F�\b�Q!\u0002mT�@\u0019\u0015�{\u0019\u0015R�F�\b�Q!�+?�S����'����+�����;�ݾ��F��G�z�f��\u0017�\\ʧ����}So�Y,�9D�8�ns�%\u0011�\u0013��.����\u0003t��\u00173\u0005�������AW�ۑ��;��t;\u0012�:\u000f�f_;\u0012�\u0006\u000f�&]���E)jw\u0004���\u0019+x�\b�p8�]s�\u0015\bG�kf�\u0002�\u0000w��V�a�'�ч=��h}}) t��E8v\u0013��\u0012j����1���&�U�M�+����Ӊ�\u000b�F�\u0015v����6�J�oT7\u0001+5$xI\r0�RC���\u0010�'5�\u0018�RC\u0002Vj���M�\u001a`���(o�!�Oj�+�J\r\tX�!\u0001+��\u001d�\u0013�/5DyK\rQ~R��\u001dVjH�J\r\tX�!�Kj��\u001a����(?�A���\u001a\u0012�RC\u0002VjH�\u001a`���(o�!�Kjs\u0014�!5Ja+\u001c�\b�\u0002q;d+\u001079[�\u001eՒ\u0015�Y-Y\u0004�j\tj��\u001cW-٢�\t}�s\u0013���&��tb�ºQh��(?�q�R���Fu\u0013�R�%�Ըj�Sj\\��)5�ZrK���ڤ�UKmR�O�n��Ըj�Sj\\��)5�ZrK���ڤ�UKmR㪥6�\u0007\u0018�q�R�Ըj�-5�Zj�\u001aW-�I���ڤ�UKN�q�R�Ըj�Sj\\��\u001aW-�I���ڤ�UKmR�%�Ըj�Sj\\��)��Z\u001a?7\u001e����d�������n���� �O\u0002�/�D�\u0007%�`ݓ�~$U���p}°j�\u0004¦j+�=��T�+���x�o��m��S��#�!X}�\u001e�ͩ��{�Ӟ��.��w��H�9F�j�\u000e~��p[\u000fUfq��.��M\u001a)�s������\u000b�P��\u000b\u001eǷ���\\��\u001a�yQ}:�57Ϳ�|V���3>3\u0013�\u00130nv�zY?8�1��/��g��)���2��r��#��[�.o\f��\\�W?wW�'Sm|Ӯ\u0006&\u001a�\u001aY.t>����˳�ˏWU,x��L��\u001a�r\u0019=��ge!��c�z\u001c\\�-�\n~�~J����q�O�s<jOyG$<\u000f��s�]&���y�]ˇ�Q{���9|�\u001a�ͳ����g���G��¯��?�\u001f\u0000\u0000��\u0003\u0000PK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000ߤ�lZ\u0001\u0000\u0000 \u0005\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0003\u0000\u0000_rels/.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�d�Q�\u0000\u0000\u00001\u0003\u0000\u0000\u001c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000word/_rels/document.xml.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000n8\u0017ij\t\u0000\u0000�F\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\b\u0000\u0000word/document.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�R%�#\u0006\u0000\u0000�\u001a\u0000\u0000\u0015\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0012\u0000\u0000word/theme/theme1.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�2�r�\u0003\u0000\u0000�\t\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0018\u0000\u0000word/settings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�:ǆ�\u0001\u0000\u0000�\u0005\u0000\u0000\u0012\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u001c\u0000\u0000word/fontTable.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0003_\u001ew}\u0001\u0000\u0000�\u0003\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u001e\u0000\u0000word/webSettings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Q:e�x\u0001\u0000\u0000�\u0002\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000U \u0000\u0000docProps/app.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�7�Gs\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003#\u0000\u0000docProps/core.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\f\"�8�\u000b\u0000\u0000�q\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�%\u0000\u0000word/styles.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\u000b\u0000\u000b\u0000�\u0002\u0000\u0000z1\u0000\u0000\u0000\u0000"
+				},
+				{
+					"name": "Download File",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/download-link/1/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"download-link",
+								"1",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 16:14:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"download-link\": \"/download-file/MQ/\",\n    \"message\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Download File",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{user2token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/download-file/MQ/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"download-file",
+						"MQ",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Download File",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/download-file/MQ/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"download-file",
+								"MQ",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 21 Jul 2024 16:16:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.7"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13393"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=\"Ajeet_Kumar_Maurya_Cover_Letter.docx\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000ߤ�lZ\u0001\u0000\u0000 \u0005\u0000\u0000\u0013\u0000\b\u0002[Content_Types].xml �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���n�0\u0010E���\u000f��Ub袪*\u0002�>�-R�\u0007\u0018{\u0002V��Ǽ��\u0013\u0002QU\u0001�\nl\"%3��3Vƃ�ښl\t\u0011�w%�\u0017=���^i7+���-d\u0019&�0�A�6�l4��\u0019L6\u00010#�Ò�S\nO����\u0015X�\u0000�*��V$z�3\u001e��\u00163����\u0003��%p)O�\u0007\u001b\u000e^�\u0012\u000b���5}nH\"\u0018d�s�Xg�L�`�\u0014��|�ԟ�|�P�rۃs\u001d��\u001a\u0018?�PW�\u0007�t\u001ft4Q+��\"�wa���|T\\y���,N�\u001c��U�%���-D/\u0001��ܚ��X�ݞ�(\u0007��\u0001�\n<E��\u001d\u000f)��\u001a\u0000;�N�\u0015L?�F�˼\u0013��܉�\u001a�\n    <Fk�\t�h\u0003�y����ڜ���q�\u0001i��?�ޯl��i�\u00001��]�H�g�\u0007�m�@\u001d����m�\u0003\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\b\u0002_rels/.rels �\u0004\u0002(�\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\f@���ѽQ��\u0018�N/c��\u0018�\u0007\b[IL\u0013��j���<��\u0002]�aG��ӓ�zs�Fu��]�\u001a�U\r��\t��^�[��x\u0000����1x�p�\f���f��#I)ʃ�Y\u0015��\u001a\u0006������\u0013�*D��\u000bi\")��c$���qU���~3��1��jH[{\u0007�=E��\u001d��\u0019~\nf?��3-���޲]�Tꓸ2�j)�,\u001al0/%��b�\n\u001a���z���ŉ�,\t�\t�/�|f\\\u0012Z���\u0019?6�!Y�_�o\u001b�]A�\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�d�Q�\u0000\u0000\u00001\u0003\u0000\u0000\u001c\u0000\b\u0001word/_rels/document.xml.rels �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���j�0\u0010E�����}-;}PB�lJ!���\u0000E\u001e?�,\t��`HI��`��r��sπ6����w��{���r\u0010茯{�*x�\u001e��A\u0010kWk�\u001d*\u0018�`[^^l��jNK���D�8R�1���d:\u001c4e>�K/����4�V\u0006m^u�r��w2N\u0019P�0ŮV\u0010w�5�j\f�\u001f�o����7o\u0003:>S!?p����8JX\u001d[d\u0005�0KD��EVK��\u001f�c2�P,���ũ�a���]���.��\u001f�ﰘs�Yҡ�+��\u0013���(!O>z�\u0005\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000n8\u0017ij\t\u0000\u0000�F\u0000\u0000\u0011\u0000\u0000\u0000word/document.xml�\\�o\u001b�\u0011��@�\u0007b�k\u0013T�%�\u0011�=�*�v�\u0016I�(A�\u0006AA�����\u000b�+E��;CR���^\u001d\u0007����0�\u000fr8||�\n        <H�ǟ>W���X��I���\u0012\u0006*ՙP�I�����Q¬�*�R+8I\u0016`��N��\u001f�ǙN�\n�c(B��y��$�s���MK���V\"5���uS]��<\u0017)�ε�v\u0007�~�_�F�`-����\u0019�I\u0014W�\\��A��\\��;�5�n�ʹ�wPz͝�\b)�\u0002e�\u000e�b�I�\u0018u\u001cE�\u0014�*�A����a��n�r\u001eG���k@�\u000eZ�R��n�W\u001a�,�Bf�։Y%���u������9~�\u0005�E�,T�d���%�{w�\u0011\u0012��q\u0017\u0015n��Ԥ�B�\u001b����\u0018����\t\u0018l\n��o���F7�Z��6iWj��E��\nYq�ov�~�2�׈�*=�*�6|\"Q#�2���hY'��8\u0013�-�f�cd���I��]\f\u0007\u0017G����9休��oF7\u001ey!#�?�n!\u0001�̸\n            <I�К�\u001f`����g�/�45�K��\u0012H��r�\f�E�ST�Gש�\u001a\u0019�b�~�\u0010\t���vNW��oDQ޻���\u0010�2[JI%ps�\n                <o���\\H|{�B�$\u001c��w\u0013@�.�\t7C�\u0016\u000b��\n                    <w���z뻍B�Ka�̥V�RA�\n\u0004�\u0018\n\r��\u0015�-��n\n                        <J�{/ǫ��T�~c�}\u000b���F������nQc/l\rR�\u001d7.j�\u001d�B\u001dN��\u0000�����?+y���DE\"��ڪ\rX03HN��\u001a���N������7f��z|O;\u001b�m��rU7���;�=62<\u0003[vؠw���ٓ?=�?e�\u000f\u000f�\u0007����\u001e㴎��&*?��\u000e���R�ݖd5nu���灵��@�?\u0012�C���\r�����v��\u0011.�W�и��\u0017`�h���}|A\t\u0007�`ox\u0005�ַ�,�B��\b��0�a\u001ct�?E�¹��c��9�0��\tꀛ�.l��\u0016\u0013�\u0003\u0013W��\u001b�h��f�L�eՂ\t��\u0002��\u0005s%���ݜ\u001b`\u0017�\u0010\n��Z[AYf�݆\u0019�0n\u0019�f`���1,�q^�8��\r�u�2/�ZOH\n����>\bW2ά3\u001a�񥸗�\u001aPZ�A�\u0018�\u0005�\u0014X�0NE-�bc�斶\r��aa�\u0000�b#�eF̀���h\n�p)\u0017�\u001a'!�M\u0007i�D�%�>g/H�\u001f\u0016 �X�4b���\u001d�-��3�mFz�kHq�p\u0010�s�iSp%�xͻ\u001b.�D�)�\u0013��\u0002Ό��zT8j'ɿ^�3�N��\fe1�_��Pi����{n�e�Ec\f(�\u0018�\u001bc\u001b\u001aX\u0004���;�1�\u0004ѐ�q�?��󊳨<\u00025�ؕB�q�k�3��P�b\u0011��Pt.\u0014rÂ|�y�'�\u0003+���F��\f*��\u001a��\u0003�\u0016;��z\u001c���س�\u000f�#\u0013\"�t�z\u0012hk-j�kI\u0006Y�zƠ���$8 �:G��\u0015�c�r�0���-Li�ܠ�u'=�,i��c;2���!��H�E�Ŵ�\u0007�A�ÂπhLK\u00013\u000f\b\u0003d\u0014iW�=;�\u001e=�ᶍm�ck\u001e\u001f�y|W\u001a�\u0014�n\u001c\u0019��y�F�T�7l%�\"Vj�`�\u0012H\r��UE3`�89ֻ�\u0005Z/,P��A�\u001a�\u000240�� 6g�\b���:��D��a�@V\rm\u0019���\fa+uM\u0016��^�\u0006s��\u0017E\u0018�l2�;Z��L��ը�f\u000e����x��\u0005���֓��5W��j�=��K��4DE\u0015\u000e�\u000f�p�H?����e�T�\f��\u0007v\u0014+Egh�����P8F=��P\u001a�f�Cϐ��\u001d��l\u0015�\r\u000b!o�\u0002V\u0001Nv\u0016�MK�-y?Ƽ�ߕ�9\u0002\u0003\u0013\u0007R,�}\u001ce\"�`f�%��@g��\b�����/�\u000f\u001df\u001b��\u0010�\u0017;�Η�Rר�C�R�p4�t<�\u0002���\n\u0007O;\u0018:~v�\u00029\u0013�>��\u0012����\u001b������7a\u0017Y3ƨ\f�ۈ��j&a\n��2����Q\u0014�t��{�\u0018;k���tٻ\u0012�o��S�1��\u0002�R���Èi#\u0011��z�\u000bd\u0013t�����H�ғ-yV�|o�\u000e�P��K�\u0005�\n\u0019H�H��%D���\u0003���k\r^\u001b�D:��H�\u0018WRj��cr,\u0004'1 q!�a)�&`����\u0006/�\u000f4\u001b\t\riE8��������k�<��B|�F�`'�@M�\u000b�n�����\f9OG��2\u0002��R�G�x�ÍVP���_�1�\u001c\u0012�n�w��9ʓ#\r�/�`��6D��E\u0017��k���\u000fc��1\u0011\u000f\u0011\u0014�����#h=��#��\u0018Z:\u0000�S��i�-��F�21\u0013\u0019:�>\u001f��S�\u0005@\u0015��9�P�͵�zs�޶��i��\u0000:\u0006\u0002C\u0002�L*p�h���\f�w���55B\u0011}\u000e�|�B`HA!�3���\u0011�'\u0006bt�6i��\u000e��ֽE��@6�\u000183����;]%e\u0017]v)��:@���\u0015����\u0005bD�i�+:~a��G\n                            <uA�mCa�?x\u0011=�۹]�s�\u0013����\u0013mBal&��\u0007�-\u0007�jC���\u001e�*��\n��?��\u0018�\u0014]��8�VH\u001bL|�����V�\u0014=�x�4/a���#��\u0017F��$\u0002��MJ_[�$�\u0014@Q�LX��,+��F\u001cE��\u001b9x/E\u0011�=�O\u0001 ��<�b\"\u0004Sꄫi<�E\u0007�p��pҀr \u0018�E�����S*6�&[��\"r�_�&ɫ�D��/�Z�h)�qP�\u0007n*f�@���(����!����W��Ⱦg��̴7�?�\u000fI�Mf�o\u0002F0~\u0018���z^^1����'I0���(���h?b�.^�aLb(|�\u001f�x̯o\u0003���w%��0��w�A���`�-\u001a\u0017\u0011�\u001c<\u001a�8�T�?�t��\b\"\b:A1\u0012.E-�\u000e�g�C\u0017�e�W\u0011���Rs�o\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�R%�#\u0006\u0000\u0000�\u001a\u0000\u0000\u0015\u0000\u0000\u0000word/theme/theme1.xml�YM�\u001b7\u0018�\u0017�\u001f��\u001d��c�7�c;i����&%GyF�Q�\u0019\u0019I�]\u0013\u0002%9\u0016\n�i顁�z(m\u0003\t����mS�\u0014�\u0017��xlɖY�l`)Y�Z\u001f�����J�4��WN\u0012\u0002�\u0010㘦\u001d�z��\u0000�\u00064�i�q�\u001c\u000eK-\u0007p\u0001�\u0010\u0012���3Gܹ���\u0007�ᎈQ���O�\u000e�8�\u0010ӝr�\u0007�\u0019�Kt�R�7�,�BVYT\u000e\u0019<�~\u0013R�U*�r\u0002q�\u0014&����\u0018\u0007\b\u001cf.��������YC@�A�\u001a\u0019\u0016\n\u001bN��\u0017�s�0p\u0004IǑ���\u0010�\b\u0007\u0010ȅ��8\u0015��w/��FDl����oa�0\b'5eǢ���u=��]�W\u0000\"6q��1h,�)\u0000\f\u00029Ӝ���z�^�[`5P^���7�������7�]/�\u0018x\u0005ʋ�\u0006~8�W1�@yѳĤY�]\u0003�@y���oV�}�i�\u0015(&8�l�+^��\u0017�]BƔ\\��۞;l�\u0016�\u0015�����>\u0015��Z\u0002�S6�\u0000�\\(p\n�|��0�8\u001f\u0012\n                                <b\u0018��(�\u000bo\nS�es�V\u0019V���qUIE\u0004� �Y�M\u0001�h��\u0000\u001e0<\u0015\u001d�c��� o^����sp����_N\u001f?>}����\u001aL#����_���S����^?�ʎ�:���>���/�@�\u0003_}��\u0017�^}���?<���\f�t�!N\u0010\u00077�1�M\u001391�\u0000h����a\f�n�M#\u000eS��X�\u0003\u0011\u001b�\u001bsH�\u0005�Cf\u0004�2)\u00136���}��A�f\u0002[����\u0000�SJz�Y�t=\u001bK��,�샳���\r�ml-���T�wls��Ƞy�Ȕ�\b�H���N\u0010����؈�>\u000e\u0018�t,�=\fz\u0010[Cr�G�jZ\u0019]É���FP�ۈ��]У�澏�L��\u0015��\\\"b��*�\t�X\u0019Ä��=(b\u001bɃ9\u000b��s!3\u001d!B� D��ln��A���\u0017{���\n                                    <1�L��\r�\u0007)Ց}:�c�L��q\u001a�؏�D.Q\bnQa%A�\u001d��e\u001e`�5�w12�}�޾#�վ@��\u0019�m\tD��8'c����'8=S��d�{��.��շO��{!\u0005�˰uG���6ܺx�����kw\u001f��[Hn\u0017\u000b��t�����to���/�+�V��⪮�$[��cLȁ�\u0013�Ǖ�s9�p(\u001bUE\u0019-\u001f\u0013��,.�3p\u0011��\f\u0018\u0015�`\u0011\u001f�p*���\u0011\"�p\u001dq0�\\�\u000f���;� �d��yk�Z<�J\u0003(V��|)��i$��Fs�\b�t�j�zT.\bd����6�I�n!�,\u001a� �fv.,�\u0016\u0016���V\u0016�k�\u0015��\u0000�~��ܜ�\\o��0�Sn_d��3�-��k��3��i����L\u0012�2�a�֛�9��UJ\rzY(6i4[�\"י��i\u0003I�\u001a8�{��I7\u0001�v���\u0019�b2��x���Di�\t�\"��EY���>�q\u000eS]��\u0013,\u0010\u0003\u0004'r��i �[����xAɵ+\u0017/r�KO2\u001a�Q �����/wb�}KpV�3I� \u000e�����m(\u0003�5�Y\u0000C��2�!f��^EqM�\u0016[���l�E!��pq��b��UyIG��b�>+����(ʒ�֧��FY�&�[\u000e��Դ�ǻ;�5V+�7X�ҽ�u�B붝\u0012o h�V�\u0019�2�\u0016j�V��9^\b��Ks�\u0019qާ����\u000e��^�j\u001b�&��\\�}y]�\u0011�\u0015Ut\"�\u0011��G�\\\tTk�.'\u0002�\u0018�8\u000f*^��k�_���Aɭ��R���K]ϫW\u0007^����\u001eʠ�8�z��C�\n                                        <C�7/�}��KR\\�/\u00054)Su\u000f.+c���Z���\u0005`\u0019�\u0007�ڰ]o�\u001a�v�;,��^���\u001b�R��7�þ��Ç\u000e8R`�[��ƠUjT}��6*\u0019�V��tk����\u0006n��\"�r��w\u0011^�k�\u001f\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�2�r�\u0003\u0000\u0000�\t\u0000\u0000\u0011\u0000\u0000\u0000word/settings.xml�V�n�8\u0010}_`����*���T�Sĉ�M\u0011o���\u0000J�l\"���츋��\u001dRb�E�ݢO&�̍3gF~�ўhC��G�E\u001a���%�b;��lV�U42\u0016\t��\u0014d\u001e\u001d���]����Ca���fF�B����hg�*���;���\b\u0000\u001b�9�p�ۄ#�ت��\\!K+ʨ=&y�΢ލ�G�\u0016E�\"�����:�B6\r�I�\u0013,�9q;�;Y��\b�#&�0�A\n���\u0004o��z\u0003p\u0017���=gAg<� 5~�8'=g����1� �B�T\f�'�8z�}\u0001��'zW`���t����9�_90윗t�\u0003�4�\u001dO�g��\n�Qŀ��\u0011d\u0014]\u0003-�J�G�B\u0011]Co��i\u001a%\u000e��Ȧ��\u0012��\"�y�׌ px(�\u001aq�g�x\u001bL\u001a�2�AUi�\u0002�=��/��e�C\u001aՖ�R�\u001a��Ja�dA\u000f˿��\u0005�k�Do�?��n��B \u000e/y1\u0018k��ˬ���b;\u0003\u001f\u001d�q\u0012�u \tC�)&\u001bW��\u001e\u0019YA�%�Jn\u0004��\u001aK��\u001f����G\t\u0010�\"��o���\b�-��\u0017\u0005�X1��Tk��\u0005\u0006n��`�i��\u0000\u0014��\u0006�P-\u000f���\t°k2nrJ#��؄�g)mPM��M��Zu�:t@��d��|\u000f\u0019l�g߼p��\u000e'G�\u0011�,n\u0011�4E���~�Ө�り�W\u0004ƙ�\"e[\u00050�;�p��\n&)\u0000~�x��Qw��g�Fz;��5�w�0�\u001f�}�-@��Z��C\u000f\u001a��\u0000A%�LzK*�\u0003�Anڪ\fV\u0002\u0016�\t�\n�q�}���\u001c\n\u000b���\n                                            <!�.\u0011�'\fӥk6Y#�:�T�l\u001e1���̵��\r�G�_�m�c���\u000e�\u0017T���v\u0018dy��荃l<�&A6\u0019d� �\u000e�Y�͜l\u0007Ӫau>\u0002}���\u001bɘ<\u0010�~��\u0011uE0;��]�Y�^�\u0013��֌�\u0005y��M0���CQ�ѓ[��̙��\f\u001dek_�:�)��\u001e0�(\f�\u000bcO�W���_S�cy�հ�/��\u001950�\nv��:`x,�����\u0000�\u001f���I�@��\u001eò���\u0013���������t\u0012O�ٛx����W�l\u0019��w7Y~�/���~\n����\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�:ǆ�\u0001\u0000\u0000�\u0005\u0000\u0000\u0012\u0000\u0000\u0000word/fontTable.xmlܓ�j�0\u0014��\u0007{\u0007��Ʋ�4]�S�@a�bm\u001f@Qd[L��\u0012/o�#��.B���\n���~G�$}X�\u000f��&{�A9[�|�(�V���ME__�7w�@�v˵���\u0007\t�a���}���\r@p���\u0011\u0015mC�\u0016Y\u0006�����u�b�v���M�d��_��F8��6J�p�\n�n��o���VB~sbg�\ri|�F��Ъ\u000e���-���m睐\u0000�g�\u0007��ʞ0yy\u00062Jx\u0007�\u000e\u0013�̸����9K_F�\u0005̮\u0003\u0014'�\u0011���:�7\u001a��J\b��r�O���\u0006\u000b_�V\u001b�R��ց̱�红�`k6�w�K6�o�Ŏ��\u001ed�\f\u001d�\u0010��(}8��+��Щ �c��^�E\r%P\r\u0016v�a\u0015]��\u0015���\u000eI��c����1)�\\��2&�S�b\"\u0012'5�#\u0012��\u0007��\u0006\u0003g&^��@~Ȟ�t��\u000bF\nv�&f�#��^e�'�UF��ό��f��ȳl�$�O\u0017T<&\u0005����w�9V����S\u0015�1!�Uӆ��%\u001e�\u000fzX�\u000fX�\u0001\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0003_\u001ew}\u0001\u0000\u0000�\u0003\u0000\u0000\u0014\u0000\u0000\u0000word/webSettings.xml��oO�0\u0010�ߛ�\u001d���\rT \u000b��\u0010��1F�\u0003t]�5���-L���6�)�`�z}�_�r�t��d���\t�\t\u0019�#\u0012p� \u0013�H��z՛��y�3*A��#���ʹ�+��s��\u0005H�.V,!��&\u000eC�J����\u001a�9XE=^m\u0011*j?7��@\u0019�E*��p\u0018E#���k(���%����7��r�DЮ\u0014�\u001dh�5�\nlf,0�\u001cΣd�ST�#fp\u0001R�Yp��>\u000e��A�}\u00105��'�C7��\bP,~*4X�J\\\u0001v\u0012 ��p\u0007�غ�\u0019T��p����n2��� �l�l�[*1K�Z�\u0015<��\u001f�訾���G^��\u0014\u0017�=�?:6��l\u001d��G�C���:0��}�@\u0002n�n<�\by�Y7g���n^{>y\u0017kx\u001a�\r\u000fg�\u00180^(��W`\u0017\u0016*�m�\u001a�\u0012�ח���'�~\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Q:e�x\u0001\u0000\u0000�\u0002\u0000\u0000\u0010\u0000\b\u0001docProps/app.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�R�N�0\u0010�#�\u000fQ��i�B���P\u0011��KJ�g��$\u0016�m�nE��\r�!�\u001b9��z�3\u0013����\u0001}P֬��$K\u00134Җ�������X�I�B[���!���3x�֡�\nCB\u0014&��&F�b,�\u0006[\u0011&464��oE����V��xk�E\u0013�,�.\u0019~D4%�\u0017n L{��!������\u0017ފ�#>\u000e\u0005�N�������\u0006\u0000\n\u001b�.T�|N�����1�\u0019�����e���\u0002X_¶\u0011^�H������\u0011\u00007�i%E�\\����\u0006[���Kl�\u0011\u0000\u001b\u001f\u00012���{\u0015�<\u00036n�A\u0019R0]\u0002�+��E�k\u0002_t\u0002�\u000er)4n�;��\u000e\b�\u0007��m�0�ǆ���ë+�m����opds�b�;!�\\\u0016W�\f�F�\u0013�%9\u00184\f\u0000��\u000f񺻀vM�����A\u0017�[�2�t1����섑����O\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�7�Gs\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\b\u0001docProps/core.xml �\u0004\u0001(�\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��QO�0\u0010��M�\u000eK�G;@��\u0018�\u001a�$1\u0011��\u0007T��i\u000f\u0006��n��\"\u000f���~���ͦ���v�2zB�\u0001#\u0011ha�ҫ\ty[��;\u0012y�Z��h��\u0003x2ͯ�2aSa\u001c�8c��\u0002\u001f\u0005%�Sa'd�hSJ�XC�� \u0010:\u0014�ƕ\u001cC�V�r��+�C�ni\t�%GNk��v��()E'i��h\u0004��P@\t\u001a=M\u0006\t=�\b��\u0017\u001b��/�Tx�p\u0011=\u0015;z�U\u0007VU5�F\r\u001a�O������j�t�\u0000�gR����<��0D~��\r\u0002��.\t�p�Ѹ|��3�,1�B��Ɔ<Uk�7p���>h���I��)��5�\t��@\u0017��<<�R�|8\\\u001a�\u0017��\u001c�T�G�!�4;\u001a�.\b2\nF��������i1#��\r�1��\u0013�`��8I\u0019��w���\u0005��\u0002�W\u001c�\u0015O\u0002�M�Ϛ�\u0000\u0000\u0000��\u0003\u0000PK\u0003\u0004\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\f\"�8�\u000b\u0000\u0000�q\u0000\u0000\u000f\u0000\u0000\u0000word/styles.xml��[S�:\u0012�߷j��+Og\u001f�\u0010�3�aN\u0001\u0003\u000b�\u0003Ù0;ϊ�\u0010-���e���+�N\"Ӗ���\u0004��O����վĿ����/��B���ɇ�Q��PF\"}<\u001d�x���8\n�\u0011�e�OG�<\u001f�������$/^c�\u0007\n��'Ix:Z\u0014��d<��\u0005OX�A.y�>��,a�z�=�\u0013�=�˝P&KV���E�:���=\u001a՘�\u000fE��\"�_dX&<-L�8�\"�4_�e��=��=�,Zf2�y�6:�+^�D��L\u000e\u0000(\u0011a&s9/>���{dP*|�k�K�\r�\u0010\u0007�[\u0003����1�\u0019��j�UO\u0002\u0005\u001b}V�\u001f��\u000b��2.r�2����+��J�E\u001e<��<\u0014�A�� �P��4\u0017#�\tgyq�\u000b���B���I�\u0017���\"\u0012��n1����\u0017�OG{{�w.t\u000f\u001a��,}\\��ӝ\u001fS�'�[3�=\u001d�lgz�\u0003���U��]�}e\u001a^�P�vؼ�*�&G�\u001a\u001a\u000b��{��V/��zlYYȺ\u0011\u0003����c0�*�T�M+\u0017�O���\f�x4-�\u0007�#Ӗz���}&d�2�t�ɴ�ޜ�D\\�(���t!\"�s��\u001f9�6��ye��~#�e���?��,����%�K���ӔiM�t@��]�M�&��+ؤV�-~���\u0000��[��>\n��#rkkۙ�m7�B5��^\r\u001d�WC�����{5t�^\r}|��\f�lH�\u0011��\b�\u0001�m\u001c�\u001b�\u001c���\u001c���\u001c�U�\u001c�\u0013�\u001cG��9�<Fs\u001ci��\u00142te�����l��n�G�q��\u0012����\u0000~��\u0013�\u001fw�����>��q���~��5�[-��\u001be��\u0018첹�E*\u000b\u001e\u0014�e8���e�\"\u001a����d#\t0��V�\u0007�Bf^o�\u0010cR��y�\u000b�@΃�x,3UL\u000f�8O�X��\u0001�\"�#\u0004f�(3ǈ��t��<�i�)\u0013�\u000e�+� -�\u0019An.�#\u0019��\u0011��$��:�U���&\u0011\u0004I��0�û&\u0019���U���JC��2�9\u0011�&�\fkxm`0�K\u0003�\u0019^\u0019\u0018����Ҍj�j\u001a�H�4�\u0001�iD�V�'ո�4�q�iD�Vӆ�ۃ(b3�۫�I�cw\u0017��Ǳ\u0007�c*\u001eS�\u0016\u0000�w7�1���e�1c�E��J�c�mƶs.����b��&Q��M�\\��\u0016i9|@\u001b4*s�yD�Z�\f��\r�حZ&�\u0005�5M=3-gE�i\r��i�,.�\u0005�p��bx�m\fp%���\u0006�X�\f���Y-'�̷����mX�m�vV\"�^�$�e,�'�i��u�3U�=\r&]�8��<�#N�LV�f[~�H����r�raj�\u0006���~u\u0006<�e��\u001bt\u001f3���v��0\u0011\u0007t+��ۯ��\\�2S\u000f\f\r�\\\u0016�LȘ����~��?h:x�����hkψ\u000e\u000f\u0019؅ ��T$\u0019\u0011��2S��d\u001fjx��3ɲ��v��ꢓ�\u0013\u0011�,YV�\u000e\u0002o�y�Y�?\u0004�!��7˄>.De�\u0007\u0012�u�0/g�����N\u0006$G����9�h��&�\u000e7|���\r_\"\u00185��A�/��6p�7����؋��p�B��Qm�G��Ë��'c��˘n\u0000W@�\u0011\\\u0001ɆP�e��[lx�\u001blx��K�2�GpH������L\f\u0003�R���d00*\r\f�T��W�X���X����T0�%�\u0005��3��?�Y\u001e\u000bF�g\u0006F�g\u0006F�g\u0006F�g�_\u0002>��E0�.�BR圅��Ѥ\u0005O�2c�+\u0011�2揌�\u0000iE���\\ߍ ��\"n\u0002�>F\u001d\u0013.�+\u001c��?���k�E�/�#�,��$:������k��̝\u001c��p\u001f��/d\u001c�̱M�XU/O��2�v�t��aϯ�qQ\u0004���h��9��\u001a�*�\u001ba�\u001bl\u001b���,ma�<\u0012e��(���h����F�����J�\u0011y�3\u0012�y�=r�JnD\u001e���m~�\u0019i|ڈ���\u0017�=�&�qW��k<G�\u001dwe�:��ٮDZG���qW\u00165�\u0012���>[\u0000���\u0019w|?��1.rS0vrSz�ʍ�2�w�K�=;f�4����\u0000�YD��9�,euܾq©�M]7j��<h���?q՘e���{�q#z�;nD�\tȍ�5\u00139�QS���{nr#zORn\u0004z��{\u0004�l\u0005�q�\u0015���� �g�\u001a�\np#z/\u0007�\b�Q!\u0002m�\u0001+\u00057\u0002eT\u0010�eTHA\u001b\u0015\"�F�\b�Q�\u0002\fgT\u0018�3*��1*��\u0018\u0015R�F�\b�Q!\u0002mT�@\u001b\u0015\"�F�\\�;ý�\n)h�B\u0004ڨ\u0010�6�Y/\u000e0*��\u0019\u0015��\u0018\u0015R|�\n)h�B\u0004ڨ\u0010�6*D��\n\u0011h�B\u0004ʨ �˨��6*D��\n\u0011h�V�\u001a�\u001b\u0015��\n�}�\n)>F�\u0014�Q!\u0002mT�@\u001b\u0015\"�F�\b�Q!\u0002eT\u0010�eTHA\u001b\u0015\"�F�\b�Q���\u0001F��8��x\u001f�B��Q!\u0005mT�@\u001b\u0015\"�F�\b�Q!\u0002mT�@\u0019\u0015�{\u0019\u0015R�F�\b�Q!�+?�S����'����+�����;�ݾ��F��G�z�f��\u0017�\\ʧ����}So�Y,�9D�8�ns�%\u0011�\u0013��.����\u0003t��\u00173\u0005�������AW�ۑ��;��t;\u0012�:\u000f�f_;\u0012�\u0006\u000f�&]���E)jw\u0004���\u0019+x�\b�p8�]s�\u0015\bG�kf�\u0002�\u0000w��V�a�'�ч=��h}}) t��E8v\u0013��\u0012j����1���&�U�M�+����Ӊ�\u000b�F�\u0015v����6�J�oT7\u0001+5$xI\r0�RC���\u0010�'5�\u0018�RC\u0002Vj���M�\u001a`���(o�!�Oj�+�J\r\tX�!\u0001+��\u001d�\u0013�/5DyK\rQ~R��\u001dVjH�J\r\tX�!�Kj��\u001a����(?�A���\u001a\u0012�RC\u0002VjH�\u001a`���(o�!�Kjs\u0014�!5Ja+\u001c�\b�\u0002q;d+\u001079[�\u001eՒ\u0015�Y-Y\u0004�j\tj��\u001cW-٢�\t}�s\u0013���&��tb�ºQh��(?�q�R���Fu\u0013�R�%�Ըj�Sj\\��)5�ZrK���ڤ�UKmR�O�n��Ըj�Sj\\��)5�ZrK���ڤ�UKmR㪥6�\u0007\u0018�q�R�Ըj�-5�Zj�\u001aW-�I���ڤ�UKN�q�R�Ըj�Sj\\��\u001aW-�I���ڤ�UKmR�%�Ըj�Sj\\��)��Z\u001a?7\u001e����d�������n���� �O\u0002�/�D�\u0007%�`ݓ�~$U���p}°j�\u0004¦j+�=��T�+���x�o��m��S��#�!X}�\u001e�ͩ��{�Ӟ��.��w��H�9F�j�\u000e~��p[\u000fUfq��.��M\u001a)�s������\u000b�P��\u000b\u001eǷ���\\��\u001a�yQ}:�57Ϳ�|V���3>3\u0013�\u00130nv�zY?8�1��/��g��)���2��r��#��[�.o\f��\\�W?wW�'Sm|Ӯ\u0006&\u001a�\u001aY.t>����˳�ˏWU,x��L��\u001a�r\u0019=��ge!��c�z\u001c\\�-�\n~�~J����q�O�s<jOyG$<\u000f��s�]&���y�]ˇ�Q{���9|�\u001a�ͳ����g���G��¯��?�\u001f\u0000\u0000��\u0003\u0000PK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000ߤ�lZ\u0001\u0000\u0000 \u0005\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u001e�\u001a��\u0000\u0000\u0000N\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0003\u0000\u0000_rels/.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�d�Q�\u0000\u0000\u00001\u0003\u0000\u0000\u001c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000word/_rels/document.xml.relsPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000n8\u0017ij\t\u0000\u0000�F\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\b\u0000\u0000word/document.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�R%�#\u0006\u0000\u0000�\u001a\u0000\u0000\u0015\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0012\u0000\u0000word/theme/theme1.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�2�r�\u0003\u0000\u0000�\t\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0018\u0000\u0000word/settings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�:ǆ�\u0001\u0000\u0000�\u0005\u0000\u0000\u0012\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u001c\u0000\u0000word/fontTable.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\u0003_\u001ew}\u0001\u0000\u0000�\u0003\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u001e\u0000\u0000word/webSettings.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000Q:e�x\u0001\u0000\u0000�\u0002\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000U \u0000\u0000docProps/app.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000�7�Gs\u0001\u0000\u0000�\u0002\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003#\u0000\u0000docProps/core.xmlPK\u0001\u0002-\u0000\u0014\u0000\u0006\u0000\b\u0000\u0000\u0000!\u0000\f\"�8�\u000b\u0000\u0000�q\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�%\u0000\u0000word/styles.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\u000b\u0000\u000b\u0000�\u0002\u0000\u0000z1\u0000\u0000\u0000\u0000"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTYyNjc4LCJpYXQiOjE3MjE1NTk2NzgsImp0aSI6IjM1MDliMmY1NTAyMTQ0NjRhN2FmZmM4YzllYzJkNWI5IiwidXNlcl9pZCI6MTN9.b-Fhcj4ZsPLEpnhrvAQHixaOHEc6tx8Ucil02udqHtM"
+		},
+		{
+			"key": "user2token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNTc3ODE5LCJpYXQiOjE3MjE1NzQ4MTksImp0aSI6ImQxZDUyOGE5M2JlYTQwOGQ5YzM0NDFkOTUwMDViYTdmIiwidXNlcl9pZCI6MTN9.QXfijCHNXtidP177jPRHwSyW8mTC_-wGf2bGU5WIu7k"
+		}
+	]
+}
